@@ -92,6 +92,40 @@
                                     </div>
                                 </div>
                                 <button class="top__btn">Рассчитать</button>
+                                <div class="popup__iin " data-modal>
+                                    <div class="popup__iin-block">
+                                        <button type="button" class="popup_calc_close">&times;</button>
+                                        <p class="popup__title">ИИН водителя</p>
+                                        <input class="popup__input" type="text" id="iin" placeholder="Введите ИИН водителя">
+                                        <label class="popup__label">
+                                            <input class="stazh" type="checkbox" name="checkbox-test">
+                                            <span class="checkbox-custom" id="stazhz"></span>
+                                            <span class="label">Стаж вождения более 2-х лет</span>
+                                        </label>
+                                        <div class="popup__iin-btn">
+                                            <button class="btn--add-user btn--add-user--iin">Добавить водителя</button>
+                                            <button class="btn--end-process">Завершить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popup__number" data-modal>
+                                    <div class="popup__number-block">
+                                        <button type="button" class="popup_calc_close popup_calc_close--number">&times;</button>
+                                        <p class="popup__title">Номер автомобиля</p>
+                                        <input class="popup__input popup__input--numer" id="number" type="text" placeholder="Введите гос. номер автомобиля">
+                                        <label class="popup__label popup__label--number">
+                                        <input class="assign" type="checkbox" name="checkbox-test">
+                                        
+                                            <span class="checkbox-custom" id="assign"></span>
+                                            <span class="label">Зарегистрирован в городе областного или республиканского значения</span>
+                           
+                                    </label>
+                                        <div class="popup__iin-btn">
+                                            <button class="btn--add-user btn--add-user--number">Добавить водителя</button>
+                                            <button class="btn--end-process">Завершить</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                             <ul class="top__icon-list">
                                 <li class="top__icon-item top__icon-item--info">
@@ -357,38 +391,8 @@
 
 
     <!-- Start Calculator -->
-    <div class="popup__iin">
-        <button type="button" class="popup_calc_close">&times;</button>
-        <p class="popup__title">ИИН водителя</p>
-        <input class="popup__input" type="text" placeholder="Введите ИИН водителя">
-        <label class="popup__label">
-            <input class="checkbox" type="checkbox" name="checkbox-test">
-            <span class="checkbox-custom" id="stazh"></span>
-            <span class="label">Стаж вождения более 2-х лет</span>
-        </label>
-        <div class="popup__iin-btn">
-            <button class="btn--add-user">Добавить водителя</button>
-            <button class="btn--end-process">Завершить</button>
-        </div>
-    </div>
 
-    <div class="popup__number">
-        <button type="button" class="popup_calc_close">&times;</button>
-        <p class="popup__title">Номер автомобиля</p>
-        <input class="popup__input popup__input--numer" type="text" placeholder="Введите гос. номер автомобиля">
-        <label class="popup__label popup__label--number">
-            <input class="checkbox" type="checkbox" name="checkbox-test">
-            <div> 
-            <span class="checkbox-custom" id="stazh"></span>
-            <span class="label">Зарегистрирован в городе областного или республиканского значения</span>
-        </div>
-        </label>
-        <div class="popup__iin-btn">
-            <button class="btn--add-user">Добавить водителя</button>
-            <button class="btn--end-process">Завершить</button>
-        </div>
 
-    </div>
     <!--End  Calculator -->
     <script src="js/main.min.js"></script>
 </body>
