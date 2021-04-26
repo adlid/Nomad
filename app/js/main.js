@@ -81,55 +81,63 @@ changeModalState(modalState);
 const url = 'https://jsonplaceholder.typicode.com/users';
 
 
-class MenuCard {
-    constructor(src, alt, title, descr, price, parentSelector, ...classes) {
-        this.src = src;
-        this.alt = alt;
+class PriceCard {
+    constructor(title, downTitle, price, text, parentSelector, ...classes) {
         this.title = title;
-        this.descr = descr;
+        this.downTitle = downTitle;
+        this.text = text;
         this.classes = classes;
         this.price = price;
         this.parent = document.querySelector(parentSelector);
-        this.transfer = 27;
-    }
 
-    changeToUAH() {
-        this.price = this.price * this.transfer;
     }
     render() {
         const element = document.createElement('div');
         if (this.classes.length === 0) {
-            this.element = 'menu__item';
+            this.element = 'tarif-plan__card';
             element.classList.add(this.element);
         } else {
             this.classes.forEach(className =>
                 element.classList.add(className));
         }
-
-
         element.innerHTML =
-
-            ` <img src= ${this.src} alt=${this.alt}>
-            <h3 class="menu__item-subtitle">${this.title}</h3>
-            <div class="menu__item-descr">${this.descr}</div>
-            <div class="menu__item-divider">   </div>
-            <div class="menu__item-price">
-                <div class="menu__item-cost">Цена:</div>
-                <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+            `  <div class="card__title">${this.title}</div>
+            <div class="card__down-title">${this.downTitle}</div>
+            <div class="card__price">${this.price} </div>
+            <div class="card__price-text">за год</div>
+            <div class="card__text">${this.text}</div>
+            <button class="card__btn">Купить</button>
+            <div class="card__dropdown">
+                <div class="card__dropdown-text">
+                    Что включает страховка?
+                </div>
+                <img src="images/dropdown.svg" alt="">
             </div>
           `;
         this.parent.append(element);
     }
 }
-new MenuCard(
-
-    "img/tabs/vegy.jpg",
-    "vegy",
-    "MEnu Fitnes",
-    'Menu fites - ryo bla bla bla',
-    9,
-    '.menu .container',
-    'menu__item',
-    'big'
-
+new PriceCard(
+    "Базовый",
+    "cамый дешевый",
+    "14 302 ₸",
+    "Только <strong> ОС ГПО ВТС</strong> без дополнительной страховой защиты.",
+    '.tarif-plan__cards',
+    'tarif-plan__card'
+).render();
+new PriceCard(
+    "Cтандарт",
+    "бестселлер",
+    " 9 400 ₸ ",
+    " <strong> ОС ГПО ВТС</strong> с дополнительным лимитом ответственности.",
+    '.tarif-plan__cards',
+    'tarif-plan__card'
+).render();
+new PriceCard(
+    "Премиум",
+    "cамый дорогой",
+    " 32 899 ₸ ",
+    "Только <strong> ОС ГПО ВТС</strong> также <strong>  КАСКО </strong> на случай ДТП",
+    '.tarif-plan__cards',
+    'tarif-plan__card'
 ).render();
