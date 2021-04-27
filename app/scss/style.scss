@@ -903,11 +903,34 @@
             border: 0.5px solid #D7D7D7;
             border-radius: 8px;
             width: 31%;
+            transition: all .5s ease;
+            position: relative;
+            &:hover {
+                transform: scale(1.1);
+                .card__price {
+                    // margin-bottom: 5px;
+                }
+                .card__text {
+                    //padding-top: 50px;
+                }
+                .card__btn {}
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background: #931913;
+                    border-radius: 8px 8px 0px 0px;
+                    height: 4px;
+                }
+            }
         }
     }
     
     .step {
         &__circle {
+            padding-top: 3px;
             height: 39px;
             width: 39px;
             border-radius: 50%;
@@ -960,10 +983,11 @@
             padding-top: 40px;
             font-size: 18px;
             line-height: 26px;
-            margin-bottom: 40px;
+            margin-bottom: 118px;
             position: relative;
             width: 262px;
             text-align: center;
+            height: 44px;
             &::before {
                 content: '';
                 position: absolute;
@@ -999,6 +1023,105 @@
                 width: 100%;
                 top: 0;
                 left: 0;
+            }
+        }
+    }
+    
+    .dropdown {
+        position: relative;
+        width: 100%;
+        min-width: 25%;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #E8E8E8;
+            height: 1px;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        &+&::before {
+            content: '';
+            display: block;
+            width: 1.5px;
+            height: 103px;
+            align-items: flex-start;
+            background: #E4E4E4;
+            border-radius: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__list {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            z-index: 10;
+            bottom: -25px;
+            left: 50%;
+            min-width: 100.5%;
+            background: #FFFFFF;
+            border: 1px solid #D7D7D7;
+            border-width: 0px 1px 1px 1px;
+            border-radius: 0px 0px 8px 8px;
+            padding: 3px 41px 2px 27px;
+            transform: translate(-50%, 100%);
+            transition: all 0.4s;
+            &--big {
+                padding: 18px 25px 25px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 20px;
+                top: -20px;
+                left: 0;
+            }
+        }
+        &__wrapper {
+            padding: 13px 20px;
+            &::after {
+                content: '';
+                //display: inline-block;
+                background-image: url(../images/dropdown.svg);
+                background-repeat: no-repeat;
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                right: 34px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 0.4s;
+            }
+        }
+        &__title {
+            margin-bottom: 18px;
+        }
+        &__text {
+            color: #696160;
+            margin-bottom: 22px;
+        }
+        &__item {
+            display: inline-block;
+            white-space: nowrap;
+            &+& {
+                margin-top: 22px;
+            }
+        }
+        &:hover & {
+            &__list {
+                opacity: 1;
+                pointer-events: auto;
+                bottom: 7px;
+            }
+            .tarif-plan__card {
+                border-width: 1px 1px 1px 0px;
+                background-color: #FF7900;
+            }
+            &__wrapper::after {
+                transform: translateY(-50%) rotate(180deg);
             }
         }
     }

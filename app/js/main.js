@@ -82,14 +82,19 @@ const url = 'https://jsonplaceholder.typicode.com/users';
 
 
 class PriceCard {
-    constructor(title, downTitle, price, text, parentSelector, ...classes) {
+    constructor(title, downTitle, price, text, dropdownTitle1 = null, dropdownText1 = null, dropdownTitle2 = null, dropdownText2 = null, dropdownTitle3 = null, dropdownText3 = null, parentSelector, ...classes) {
         this.title = title;
         this.downTitle = downTitle;
         this.text = text;
         this.classes = classes;
         this.price = price;
+        this.downTitle1 = dropdownTitle1;
+        this.dropdownText1 = dropdownText1;
+        this.downTitle2 = dropdownTitle2;
+        this.dropdownText2 = dropdownText2;
+        this.downTitle3 = dropdownTitle3;
+        this.dropdownText3 = dropdownText3;
         this.parent = document.querySelector(parentSelector);
-
     }
     render() {
         const element = document.createElement('div');
@@ -106,13 +111,33 @@ class PriceCard {
             <div class="card__price">${this.price} </div>
             <div class="card__price-text">за год</div>
             <div class="card__text">${this.text}</div>
-            <button class="card__btn">Купить</button>
-            <div class="card__dropdown">
-                <div class="card__dropdown-text">
-                    Что включает страховка?
+            <button class="card__btn">Купить</button>   
+            <div class="dropdown">
+                <div class="dropdown__wrapper">
+                     <div class="dropdown__value">Что включает страховка?</div>
                 </div>
-                <img src="images/dropdown.svg" alt="">
-            </div>
+                 <div class="dropdown__list">
+                    <div class="dropdown__title">
+                    <strong>${ this.downTitle1} </strong>
+                    </div>
+                    <div class="dropdown__text">
+                        ${this.dropdownText1}
+                    </div>
+                    <div class="dropdown__title">
+                        <strong> ${ this.downTitle2 } </strong>
+                    </div>
+                    <div class="dropdown__text">
+                    ${this.dropdownText2}
+                    </div>
+                    <div class="dropdown__title">
+                        <strong>${this.downTitle3} </strong>
+                    </div>
+                    <div class="dropdown__text">
+                    ${this.dropdownText3 }
+                    </div>
+                 </div>
+                </div>
+          
           `;
         this.parent.append(element);
     }
@@ -122,22 +147,43 @@ new PriceCard(
     "cамый дешевый",
     "14 302 ₸",
     "Только <strong> ОС ГПО ВТС</strong> без дополнительной страховой защиты.",
+    'ОС ГПО ВТС',
+    ' Стандартный страховой полис обязательного страхования ответственности автовладельцев.',
+    '',
+    '',
+    '',
+    '',
     '.tarif-plan__cards',
-    'tarif-plan__card'
+    'tarif-plan__card',
+
 ).render();
 new PriceCard(
     "Cтандарт",
     "бестселлер",
     " 9 400 ₸ ",
     " <strong> ОС ГПО ВТС</strong> с дополнительным лимитом ответственности.",
+    'ОС ГПО ВТС',
+    ' Стандартный страховой полис обязательного страхования ответственности автовладельцев.',
+    'Добровольное ГПО ВТС (ДГПО) ',
+    ' Дополняет лимит ответственности к вашему полису ОС ГПО ВТС на еще один миллион тенге в случае, если стандартного лимита не хватило.',
+    '',
+    '',
     '.tarif-plan__cards',
-    'tarif-plan__card'
+    'tarif-plan__card',
+
 ).render();
 new PriceCard(
     "Премиум",
     "cамый дорогой",
     " 32 899 ₸ ",
     "Только <strong> ОС ГПО ВТС</strong> также <strong>  КАСКО </strong> на случай ДТП",
+    'ОС ГПО ВТС',
+    ' Стандартный страховой полис обязательного страхования ответственности автовладельцев.',
+    'Добровольное ГПО ВТС (ДГПО) ',
+    ' Дополняет лимит ответственности к вашему полису ОС ГПО ВТС на еще один миллион тенге в случае, если стандартного лимита не хватило.',
+    'КАСКО ДТП',
+    'Страхование вашего собственного авто в случае ДТП. Приобретая этот страховой продукт не только пострадавший в ДТП получит страховую выплату но и вы сами.',
     '.tarif-plan__cards',
-    'tarif-plan__card'
+    'tarif-plan__card',
+
 ).render();
