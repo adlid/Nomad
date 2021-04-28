@@ -66,11 +66,11 @@
                     </div>
                 </div>
                 <div class="top__wrapper top__ogpo">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="top__inner">
                             <div class="top__title">ОС ГПО ВТС</div>
                             <div class="top__text">Обязательное страхование гражданско-правовой ответственности владельцев транспортных средств</div>
-                            <form action="#">
+                            <div class="tab__close">
                                 <div class="top__options">
                                     <div class="top__options-item top__iin">
                                         <div class="top__options-text"> ИИН водителя</div>
@@ -126,85 +126,240 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                            <ul class="top__icon-list">
-                                <li class="top__icon-item top__icon-item--info">
-                                    <a class="top__icon-link " href="#">ОБ ЭТОМ СТРАХОВОМ ПРОДУКТЕ</a>
-                                </li>
-                                <li class="top__icon-item top__icon-item--temp">
-                                    <a class="top__icon-link" href="#">ВРЕМЕННЫЙ ВЪЕЗД</a>
-                                </li>
-                                <li class="top__icon-item top__icon-item--sheet">
-                                    <a class="top__icon-link" href="#">ПРОВЕРИТЬ ДОГОВОР СТРАХОВАНИЯ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="insure">
-                <div class="container">
-                    <div class="insure-wrapper">
-                        <div class="insure__title">Застраховать свой автомобиль (ОСГПО)</div>
-                        <div class="insure__text">Обязательное автострахование покрывает причиненный ущерб лишь потерпевшему. Виновнику ДТП расходы на восстановление автомобиля никто не возместит. </div>
-                        <div class="insure__icon-block">
-                            <div class="icon-block__item">
-                                <div class="icon-block__img">
-                                    <img src="images/icon-money.svg" alt="">
-                                </div>
-                                <div class="icon-block-text">
-                                    Точный расчет за 2 минуты
-                                </div>
-                            </div>
-                            <div class="icon-block__item">
-                                <div class="icon-block__img">
-                                    <img src="images/icon-document.svg" alt="">
-                                </div>
-                                <div class="icon-block-text">
-                                    Без лишних хлопот
-                                </div>
-                            </div>
-                            <div class="icon-block__item">
-                                <div class="icon-block__img">
-                                    <img src="images/icon-calendar.svg" alt="">
-                                </div>
-                                <div class="icon-block-text">
-                                    КАСКО за день без похода в офис
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="insure__info-block">
-                        <div class="insure__info-block-wrapper">
-                            <div class="info-block__card">
-                                <p class="info-block__card-title">2233</p>
-                                <div class="info-block__card-text">
-                                    <p>Онлайн покупка</p>
-                                    <p>Быстро удобно</p>
-                                </div>
-                                <div class="info-block__card-big">
-                                    ОС ГПО ВТС
-                                </div>
-                                <div class="info-block__card-logo">
-                                    <img src="images/insure-logo.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-block__info">
-                            <div class="info-block__title">Cтрахование ОС ГПО ВТС от 8000 тг</div>
-                            <ul class="info-block__list">
-                                <li class="info-block__item">Самый большой штат аварийных комиссаров</li>
-                                <li class="info-block__item">Правовая поддержка клиентов</li>
-                                <li class="info-block__item">Быстрая выплата без посредников</li>
-                                <li class="info-block__item">Колл-центр 24/7</li>
-                                <li class="info-block__item">Онлайн-покупка</li>
-                                <li class="info-block__item">17 филиалов по РК</li>
-                            </ul>
-                        </div>
 
+                                <ul class="top__icon-list">
+                                    <li class="top__icon-item top__icon-item--info">
+                                        <a class="top__icon-link " href="#">ОБ ЭТОМ СТРАХОВОМ ПРОДУКТЕ</a>
+                                    </li>
+                                    <li class="top__icon-item top__icon-item--temp">
+                                        <a class="top__icon-link" href="#">ВРЕМЕННЫЙ ВЪЕЗД</a>
+                                    </li>
+                                    <li class="top__icon-item top__icon-item--sheet">
+                                        <a class="top__icon-link" href="#">ПРОВЕРИТЬ ДОГОВОР СТРАХОВАНИЯ</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="top__calculator">
+                                <div class="tarif-plan">
+                                    <div class="tarif-plan__step">
+                                        <div class="tarif-plan__step-inner">
+                                            <div class="step__circle">1</div>
+                                            <div class="step__line"></div>
+                                            <div class="step__circle step__circle--active">2</div>
+                                            <div class="step__line"></div>
+                                            <div class="step__circle">3</div>
+                                        </div>
+                                    </div>
+                                    <div class="tarif-plan__title">Выберите тарифный план</div>
+                                    <div class="tarif-plan__cards"></div>
+
+                                </div>
+                            </div>
+                            <div class="insure">
+                                <div class="container">
+                                    <div class="insure-wrapper">
+                                        <div class="insure__title">Застраховать свой автомобиль (ОСГПО)</div>
+                                        <div class="insure__text">Обязательное автострахование покрывает причиненный ущерб лишь потерпевшему. Виновнику ДТП расходы на восстановление автомобиля никто не возместит. </div>
+                                        <div class="insure__icon-block">
+                                            <div class="icon-block__item">
+                                                <div class="icon-block__img">
+                                                    <img src="images/icon-money.svg" alt="">
+                                                </div>
+                                                <div class="icon-block-text">
+                                                    Точный расчет за 2 минуты
+                                                </div>
+                                            </div>
+                                            <div class="icon-block__item">
+                                                <div class="icon-block__img">
+                                                    <img src="images/icon-document.svg" alt="">
+                                                </div>
+                                                <div class="icon-block-text">
+                                                    Без лишних хлопот
+                                                </div>
+                                            </div>
+                                            <div class="icon-block__item">
+                                                <div class="icon-block__img">
+                                                    <img src="images/icon-calendar.svg" alt="">
+                                                </div>
+                                                <div class="icon-block-text">
+                                                    КАСКО за день без похода в офис
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="insure__info-block">
+                                        <div class="insure__info-block-wrapper">
+                                            <div class="info-block__card">
+                                                <p class="info-block__card-title">2233</p>
+                                                <div class="info-block__card-text">
+                                                    <p>Онлайн покупка</p>
+                                                    <p>Быстро удобно</p>
+                                                </div>
+                                                <div class="info-block__card-big">
+                                                    ОС ГПО ВТС
+                                                </div>
+                                                <div class="info-block__card-logo">
+                                                    <img src="images/insure-logo.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-block__info">
+                                            <div class="info-block__title">Cтрахование ОС ГПО ВТС от 8000 тг</div>
+                                            <ul class="info-block__list">
+                                                <li class="info-block__item">Самый большой штат аварийных комиссаров</li>
+                                                <li class="info-block__item">Правовая поддержка клиентов</li>
+                                                <li class="info-block__item">Быстрая выплата без посредников</li>
+                                                <li class="info-block__item">Колл-центр 24/7</li>
+                                                <li class="info-block__item">Онлайн-покупка</li>
+                                                <li class="info-block__item">17 филиалов по РК</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="top__wrapper top__kasko">
+                    <div class="container-fluid">
+                        <div class="top__inner">
+                            <div class="top__title">ОС ГПО ВТС</div>
+                            <div class="top__text">Обязательное страхование гражданско-правовой ответственности владельцев транспортных средств</div>
+                            <div class="tarif-plan__step">
+                                <div class="tarif-plan__step-inner">
+                                    <div class="step__circle">1</div>
+                                    <div class="step__line"></div>
+                                    <div class="step__circle step__circle--active">2</div>
+                                    <div class="step__line"></div>
+                                    <div class="step__circle">3</div>
+                                </div>
+                                <div class="tarif-plan__title tarif-plan__title--int">Введите анкетные данные</div>
+                            </div>
+                            <div class="tab__close tab__int">
+
+                                <div class="top__intelligence">
+                                    <div class="intelligence__form">
+                                        <div class="intelligence__form-title">Сведения о страхователе</div>
+                                        <div class="intelligence__form__inputs">
+                                            <div class="intelligence__form__input">
+                                                <div class="intelligence__form__input--text">Номер удостоверения личности </div>
+                                                <input class="intelligence__form__input-primary intelligence__form__input--number" type="text" name="" id="" placeholder="Введите номер документа">
+                                            </div>
+                                            <div class="intelligence__form__input">
+                                                <div class="intelligence__form__input--text">Дата выдачи удостоверения личности </div>
+                                                <input class="intelligence__form__input-primary  intelligence__form__input--date" type="text" name="" id="dat" placeholder="Дд.мм.гггг">
+                                            </div>
+                                            <div class="intelligence__form__input">
+                                                <div class="  intelligence__form__input--text">Номер телефона </div>
+                                                <input class="intelligence__form__input-primary intelligence__form__input--number" type="text" name="" id="" placeholder="+7 (xxx) xxx-xx-xx">
+                                            </div>
+                                            <div class="intelligence__form__input">
+                                                <div class="intelligence__form__input--text">E-mail </div>
+                                                <input class="intelligence__form__input-primary  intelligence__form__input--mail" type="text" name="" id="" placeholder="Введите вашу эл. почту">
+                                            </div>
+                                        </div>
+                                        <label class="popup__label popup__label--number">
+                                            <input class="assign" type="checkbox" name="checkbox-test">
+                                            <span class="checkbox-custom" id="assign"></span>
+                                            <span class="label-form">Я соглашаюсь на сбор, обработку персональных данных и получение по ним сведений из государственных
+                                                баз данных, в том числе, сведений, составляющих врачебную тайну.</span>
+                                        </label>
+                                        <label class="popup__label popup__label--number">
+                                           <input class="assign" type="checkbox" name="checkbox-test">
+                                            <span class="checkbox-custom" id="assign"></span>
+                                            <div class="chek-flex">
+                                                <span class="label-form">Я ознакомлен и согласен с правилами страхования КАСКО «Трансформер».
+                                                </span>
+                                                <a href="#"> Ознакомиться с правилами страхования.</a>
+                                            </div>
+                                        </label>
+
+                                        <label class="popup__label popup__label--number">
+                                             <input class="assign" type="checkbox" name="checkbox-test">
+                                             <span class="checkbox-custom" id="assign"></span>
+                                              <span class="label-form">Является ли первый руководитель/Бенефициарный собственник иностранным публичным должностным лицом, политическим деятелем или государственным служащим иностранного государства ИПДЛ</span>
+                                        </label>
+                                        <button class="intelligence__form-btn">Продолжить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top__kasko--price">
+                                <div class="top__kasko--price-text">КАСКО «Трансформер» — ДТП, кража/угон, иное транспортное проишествие. <br> Срок страхования — 12 месяцев. Сумма к оплате —</div>
+                                <div class="top__kasko--price-cost">67 680 ₸</div>
+                            </div>
+                            <div class="insure-wrapper insure-wrapper-kasko">
+                                <div class="insure__title">Застраховать свой автомобиль (ОСГПО)</div>
+                                <div class="insure__text">Обязательное автострахование покрывает причиненный ущерб лишь потерпевшему. Виновнику ДТП расходы на восстановление автомобиля никто не возместит. </div>
+                                <div class="insure__icon-block">
+                                    <div class="icon-block__item">
+                                        <div class="icon-block__img">
+                                            <img src="images/icon-money.svg" alt="">
+                                        </div>
+                                        <div class="icon-block-text">
+                                            Точный расчет за 2 минуты
+                                        </div>
+                                    </div>
+                                    <div class="icon-block__item">
+                                        <div class="icon-block__img">
+                                            <img src="images/icon-document.svg" alt="">
+                                        </div>
+                                        <div class="icon-block-text">
+                                            Без лишних хлопот
+                                        </div>
+                                    </div>
+                                    <div class="icon-block__item">
+                                        <div class="icon-block__img">
+                                            <img src="images/icon-calendar.svg" alt="">
+                                        </div>
+                                        <div class="icon-block-text">
+                                            КАСКО за день без похода в офис
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="insure__info-block insure__info-block-kasko">
+                                    <div class="info-block__card-kasko">
+                                        <div class="info-block__card-kasko-key">
+                                            <p class="info-block__card-kasko-title">Cтрахование КАСКО от 8000 тг</p>
+                                            <p class="info-block__card-kasko-text">Самый большой штат аварийных комиссаров</p>
+                                            <p class="info-block__card-kasko-text">Правовая поддержка клиентов</p>
+                                            <p class="info-block__card-kasko-text">Онлайн-покупка</p>
+                                            <p class="info-block__card-kasko-text">17 филиалов по РК</p>
+                                        </div>
+                                        <div class="info-block__card-kasko-footer">
+                                            <div class="info-block__card-kasko-logo">
+                                                <img src="images/insure-logo.svg" alt="">
+                                            </div>
+                                            <div class="info-block__card-kasko-footer-text">№1 в Казахстане</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-block__card-kasko info-block__card-kasko-left">
+                                        <div class="info-block__card-kasko-keycar">
+                                            <p class="info-block__card-kasko-title">Cтрахование КАСКО от 10 000 тг</p>
+                                            <p class="info-block__card-kasko-text">Телефонная служба 24/7</p>
+                                            <p class="info-block__card-kasko-text">Правовая поддержка клиентов</p>
+                                            <p class="info-block__card-kasko-text">Онлайн-покупка</p>
+                                            <p class="info-block__card-kasko-text">17 филиалов по РК</p>
+                                        </div>
+                                        <div class="info-block__card-kasko-footer">
+                                            <div class="info-block__card-kasko-footer-text kasko-footer-phone">2223 звонки</div>
+                                            <div class="info-block__card-kasko-logo">
+                                                <img src="images/insure-logo.svg" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
+
         </main>
         <footer class="footer">
             <div class="container-fluid">
@@ -391,22 +546,7 @@
 
 
     <!-- Start Calculator -->
-    <div class="container-fluid">
-        <div class="tarif-plan">
-            <div class="tarif-plan__step">
-                <div class="tarif-plan__step-inner">
-                    <div class="step__circle">1</div>
-                    <div class="step__line"></div>
-                    <div class="step__circle step__circle--active">2</div>
-                    <div class="step__line"></div>
-                    <div class="step__circle">3</div>
-                </div>
-            </div>
-            <div class="tarif-plan__title">Выберите тарифный план</div>
-            <div class="tarif-plan__cards">
-            </div>
-        </div>
-    </div>
+
     <!--End  Calculator -->
 
     <script src="js/main.min.js"></script>

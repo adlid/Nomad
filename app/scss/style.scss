@@ -202,7 +202,7 @@
             overflow: hidden;
             box-shadow: 0px 10px 15px -5px rgba(34, 60, 80, 0.15) inset;
             &::before {
-                content: "";
+                content: attr(data-before);
                 position: absolute;
                 background-image: url(../images/belt-left.svg);
                 background-size: cover;
@@ -213,7 +213,7 @@
                 height: 353px;
             }
             &::after {
-                content: "";
+                content: attr(data-before);
                 position: absolute;
                 background-image: url(../images/belt-right.svg);
                 background-size: cover;
@@ -225,6 +225,7 @@
             }
         }
         &__inner {
+            width: 100%;
             padding-top: 144px;
             text-align: center;
             display: flex;
@@ -249,7 +250,7 @@
         }
         &__options {
             display: flex;
-            width: 100%;
+            width: 95.8%;
             align-items: center;
             height: 81px;
             box-shadow: 0px 3px 9px rgba(158, 158, 158, 0.25);
@@ -293,6 +294,7 @@
             line-height: 21px;
             margin-bottom: 60px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            &:focus {}
         }
         &__icon-list {
             display: flex;
@@ -772,6 +774,9 @@
         color: #666666;
         line-height: 18.75px;
         width: 290px;
+        &-form {
+            width: 100%;
+        }
     }
     
     .btn {
@@ -889,6 +894,9 @@
             line-height: 32px;
             color: #363537;
             margin-bottom: 73px;
+            &-int {
+                margin-bottom: 49px;
+            }
         }
         &__cards {
             display: flex;
@@ -896,6 +904,8 @@
             justify-content: space-between;
         }
         &__card {
+            z-index: 5;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1053,6 +1063,7 @@
             left: 0;
         }
         &__list {
+            text-align: start;
             opacity: 0;
             pointer-events: none;
             position: absolute;
@@ -1124,4 +1135,278 @@
                 transform: translateY(-50%) rotate(180deg);
             }
         }
+    }
+    
+    .tab__close {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .top__calculator {
+        display: none;
+        width: 100%;
+    }
+    
+    .top__ogpo[data-before="none"] {
+        &::before {
+            content: none;
+        }
+        &::after {
+            content: '';
+            background-image: url(../images/rearCar.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 901px;
+            width: 500px;
+            width: 721px;
+            z-index: 1;
+        }
+    }
+    
+    .chek-flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &>a {
+            color: rgb(95, 95, 201);
+        }
+    }
+    
+    .top {
+        &__intelligence {
+            width: 100%;
+        }
+        &__kasko {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::before {
+                content: '';
+                background-image: url(../images/frontCar.jpg);
+                height: 900px;
+                width: 500px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+            &--price {
+                right: 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 12px 33px;
+                background: #FFFFFF;
+                box-shadow: 0px 3px 12px rgba(158, 158, 158, 0.25);
+                border-radius: 8px;
+                width: 64%;
+                align-self: flex-end;
+                align-items: center;
+                margin-bottom: 116px;
+            }
+            &--price-text {
+                text-align: start;
+                width: 58%;
+                margin-bottom: 17px;
+                margin-top: 17px;
+                position: relative;
+                &::after {
+                    content: '';
+                    height: 135%;
+                    position: absolute;
+                    top: -18%;
+                    //transform: translateY(-50%);
+                    right: -8%;
+                    // transform: translateX(50%);
+                    width: 2px;
+                    background-color: #D4D0CF;
+                }
+            }
+            &--price-cost {
+                color: #931913;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 56px;
+            }
+        }
+    }
+    
+    .intelligence__form {
+        width: 100%;
+        text-align: start;
+        padding: 30px 30px 71px 30px;
+        &-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        &__inputs {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__input {
+            width: 30%;
+            &--text {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                margin-bottom: 10px;
+                position: relative;
+                &::after {
+                    content: '*';
+                    position: relative;
+                    right: 0;
+                    top: 0;
+                    color: #FF7900;
+                }
+            }
+        }
+        &-btn {
+            background: linear-gradient(0.3deg, #FE7B04 28.85%, #F99133 96.78%);
+            border-radius: 8px;
+            padding: 14px 58px;
+            color: #fff;
+            margin-top: 30px;
+            opacity: 0.6;
+        }
+    }
+    
+    .intelligence__form__input-primary {
+        border: 1px solid #D4D0CF;
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+        margin-bottom: 30px;
+        &::placeholder {
+            color: #979797;
+        }
+    }
+    
+    .tab__int {
+        background: #FFFFFF;
+        box-shadow: 0px 3px 12px rgba(158, 158, 158, 0.3);
+        border-radius: 8px;
+        margin-bottom: 114px;
+    }
+    
+    .insure__info-block-kasko {
+        width: 100%;
+        padding: 0;
+        background: #fff;
+    }
+    
+    .insure-wrapper-kasko {
+        width: 100%;
+    }
+    
+    .insure__info-block-kasko {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .info-block__card-kasko {
+        text-align: start;
+        background: #F5F5F5;
+        box-shadow: 0px 3px 9px rgba(158, 158, 158, 0.25);
+        border-radius: 8px;
+        //overflow: hidden;
+        width: 47%;
+        padding-top: 40px;
+        z-index: 2;
+        &-title {
+            color: #291F1E;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 24px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        &-left {
+            text-align: end;
+        }
+        &-text {
+            margin-right: 40px;
+            margin-left: 40px;
+            color: #291F1E;
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 16px;
+        }
+        &-footer {
+            padding: 24px 30px 24px 40px;
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 0px 0px 8px 8px;
+            color: #696160;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            z-index: 5;
+        }
+        &-key {
+            position: relative;
+            &::after {
+                z-index: -1;
+                content: '';
+                background-image: url(../images/carKey-1.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 227px;
+                height: 227px;
+                position: absolute;
+                bottom: -99px;
+                right: -77px;
+            }
+        }
+        &-keycar {
+            position: relative;
+            &::before {
+                z-index: -1;
+                content: '';
+                background-image: url(../images/carKey-2.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 227px;
+                height: 227px;
+                position: absolute;
+                bottom: -99px;
+                left: -42px;
+            }
+        }
+    }
+    
+    .kasko-footer-phone {
+        position: relative;
+        padding-left: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 10px;
+            height: 10px;
+            background-image: url(../images/card-phone.svg);
+            left: 0;
+            top: 4px;
+        }
+    }
+    
+    .tabheader__item_active {
+        background-color: lightcoral;
     }
