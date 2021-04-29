@@ -196,6 +196,7 @@
             max-width: 192px;
         }
         &__ogpo {
+            height: max-content;
             background-color: #FCFCFC;
             position: relative;
             height: 600px;
@@ -494,7 +495,9 @@
                 }
             }
         }
-        &__info {}
+        &__info {
+            text-align: start;
+        }
         &__title {
             font-size: 24px;
             font-weight: 500;
@@ -875,6 +878,7 @@
     }
     
     .tarif-plan {
+        margin-bottom: 340px;
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -1156,13 +1160,15 @@
         }
         &::after {
             content: '';
-            background-image: url(../images/rearCar.jpg);
+            background-image: url(../images/nomcar2.svg);
             background-position: center;
             background-repeat: no-repeat;
             height: 901px;
             width: 500px;
             width: 721px;
             z-index: 1;
+            bottom: 15%;
+            transform: translateY(-50%);
         }
     }
     
@@ -1195,7 +1201,7 @@
                 background-repeat: no-repeat;
                 position: absolute;
                 left: 0;
-                bottom: 0;
+                bottom: 32%;
                 z-index: -1;
             }
             &--price {

@@ -211,7 +211,7 @@ btnClose.addEventListener('click', (e) => {
     tabClose.style.display = 'none';
     tabOpen.style.display = 'block';
     parentTab.style.overflow = "visible";
-    parentTab.style.height = 1350 + 'px';
+    parentTab.style.height = 'max-content';
     //insureWrapper.style.display = 'none';
     //insurInfoBlock.style.display = 'none';
 })
